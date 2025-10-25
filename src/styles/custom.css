@@ -1,0 +1,84 @@
+/* Animaciones suaves para el sidebar */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación a los grupos del sidebar */
+.sidebar-content details,
+.sidebar-content .top-level > li {
+  animation: fadeInUp 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+/* Animación escalonada para cada elemento */
+.sidebar-content details:nth-child(1),
+.sidebar-content .top-level > li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.sidebar-content details:nth-child(2),
+.sidebar-content .top-level > li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.sidebar-content details:nth-child(3),
+.sidebar-content .top-level > li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.sidebar-content details:nth-child(4),
+.sidebar-content .top-level > li:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.sidebar-content details:nth-child(5),
+.sidebar-content .top-level > li:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.sidebar-content details:nth-child(6),
+.sidebar-content .top-level > li:nth-child(6) {
+  animation-delay: 1.5s;
+}
+
+/* Transición suave al abrir/cerrar los detalles */
+.sidebar-content details summary {
+  transition: all 0.3s ease;
+}
+
+.sidebar-content details[open] summary {
+  transition: all 0.3s ease;
+}
+
+/* Animación para los items dentro de los grupos */
+.sidebar-content details[open] ul li {
+  animation: fadeInUp 0.2s ease-out forwards;
+  opacity: 0;
+}
+
+.sidebar-content details[open] ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.sidebar-content details[open] ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.sidebar-content details[open] ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.sidebar-content details[open] ul li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.sidebar-content details[open] ul li:nth-child(5) {
+  animation-delay: 0.5s;
+}
